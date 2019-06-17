@@ -68,13 +68,13 @@ navA.forEach( function(currentValue){
   currentValue.style.color = 'green';
 });
 
+const newNavTag = document.createElement('a');
+newNavTag.textContent = "Blog";
+console.log(newNavTag);
 
+const container = document.querySelector('container');
 
-// let a = document.querySelector("nav a");
-// nav.forEach(function(currentValue) {
-//   currentValue.style.color = "green";
-// });
-// console.log(a);
+container.append(newNavTag);
 
 //Contact
 // let contact = document.querySelectorAll('contact');
