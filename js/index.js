@@ -48,12 +48,44 @@ logo.setAttribute(`src`, siteContent["nav"] ["img-src"]);
 let ctaLogo = document.getElementById('cta-img');
 ctaLogo.setAttribute(`src`, siteContent["cta"] ["img-src"]);
 
+let middleLogo = document.getElementById('middle-img');
+middleLogo.setAttribute(`src`, siteContent["main-content"] ["middle-img-src"]);
+
+
 //Button
 let btn = document.querySelector(`button`);
-btn.setAttribute('src', siteContent[`cta`] ["button"]);
+btn.textContent = siteContent[`cta`] ["button"];
 console.log(btn);
+
+//Nav
+
+let navA = document.querySelectorAll('nav a');
+navA.forEach((element, index) => {
+  element.textContent = siteContent["nav"][`nav-item-${index + 1}`];
+});
+
+navA.forEach( function(currentValue){
+  currentValue.style.color = 'green';
+});
+
+
+
 // let a = document.querySelector("nav a");
 // nav.forEach(function(currentValue) {
 //   currentValue.style.color = "green";
 // });
 // console.log(a);
+
+//Contact
+// let contact = document.querySelectorAll('contact');
+// contact.forEach((element, index) => {
+//   element.textContent = siteContent["contact"][];
+// });
+
+// let contact = document.querySelector(`contact`);
+// contact.textContent = siteContent[`contact`] ["contact-h4"];
+// console.log(contact);
+
+//Footer
+let footer = document.querySelector('footer');
+footer.textContent = siteContent ['footer'] ["copyright"];
