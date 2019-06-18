@@ -68,23 +68,51 @@ navA.forEach( function(currentValue){
   currentValue.style.color = 'green';
 });
 
-const newNavTag = document.createElement('a');
-newNavTag.textContent = "Blog";
-console.log(newNavTag);
+// const newNavTag = document.createElement('a');
+// newNavTag.textContent = "Blog";
+// console.log(newNavTag);
 
-const container = document.querySelector('container');
+// const container = document.querySelector('container');
 
-container.append(newNavTag);
+// container.append(newNavTag);
+
+// let nav a = ["Blog", "Work"]
+
+//Content
+let contentHeaders = document.querySelectorAll('h4');
+console.log(contentHeaders);
+contentHeaders[0].textContent = siteContent ['main-content'] ["features-h4"];
+contentHeaders[1].textContent = siteContent ['main-content'] ["about-h4"];
+contentHeaders[2].textContent = siteContent ['main-content'] ["services-h4"];
+contentHeaders[3].textContent = siteContent ['main-content'] ["product-h4"];
+contentHeaders[4].textContent = siteContent ['main-content'] ["vision-h4"];
+
+let contentTexts = document.querySelectorAll('p')
+console.log(contentTexts);
+contentTexts[0].textContent = siteContent['main-content'] ["features-content"];
+contentTexts[1].textContent = siteContent['main-content'] ["about-content"];
+contentTexts[2].textContent = siteContent['main-content'] ["services-content"];
+contentTexts[3].textContent = siteContent['main-content'] ["product-content"];
+contentTexts[4].textContent = siteContent['main-content'] ["vision-content"];
+
+//CTA
+let h1 = document.querySelector('h1');
+h1.textContent = siteContent ['cta'] ["h1"];
 
 //Contact
-// let contact = document.querySelectorAll('contact');
-// contact.forEach((element, index) => {
-//   element.textContent = siteContent["contact"][];
-// });
+let contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent ['contact'] ["contact-h4"];
 
+let contactTexts = document.querySelectorAll('.contact p');
+contactTexts[0].textContent = siteContent ['contact'] ["address"];
+contactTexts[1].textContent = siteContent ['contact'] ["phone"];
+contactTexts[2].textContent = siteContent ['contact'] ["email"];
+console.log(contactTexts);
 // let contact = document.querySelector(`contact`);
 // contact.textContent = siteContent[`contact`] ["contact-h4"];
 // console.log(contact);
+
+// Object.keys.
 
 //Footer
 let footer = document.querySelector('footer');
