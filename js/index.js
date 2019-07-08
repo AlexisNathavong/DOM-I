@@ -68,15 +68,11 @@ navA.forEach( function(currentValue){
   currentValue.style.color = 'green';
 });
 
-// const newNavTag = document.createElement('a');
-// newNavTag.textContent = "Blog";
-// console.log(newNavTag);
-
-// const container = document.querySelector('container');
-
-// container.append(newNavTag);
-
-// let nav a = ["Blog", "Work"]
+////ADDED NEW NAV TAG/////
+const newNavTag = document.createElement('a');
+newNavTag.textContent = 'Blog';
+const nav = document.querySelector('nav');
+nav.appendChild(newNavTag);
 
 //Content
 let contentHeaders = document.querySelectorAll('h4');
