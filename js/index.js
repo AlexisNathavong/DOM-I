@@ -70,9 +70,18 @@ navA.forEach( function(currentValue){
 
 ////ADDED NEW NAV TAG/////
 const newNavTag = document.createElement('a');
-newNavTag.textContent = 'Blog';
+newNavTag.textContent = 'Work';
 const nav = document.querySelector('nav');
-nav.appendChild(newNavTag);
+nav.append(newNavTag);
+
+const newNavA= document.createElement('a');
+newNavA.textContent = 'Blog';
+const a = document.querySelector('nav');
+nav.append(newNavA);
+
+
+// newNavTag.textContent = 'Blog';
+// nav.appendChild(newNavTag);
 
 //Content
 let contentHeaders = document.querySelectorAll('h4');
